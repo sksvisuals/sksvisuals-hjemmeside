@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="index.js"></script>
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="sks.bg.png" />
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('login-form');
+        const passwordInput = document.getElementById('password');
+        const loginMessage = document.getElementById('login-message');
+    
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Forhindrer standardformularindsendelse
+    
+            const password = passwordInput.value.trim(); // Fjerner whitespace fra starten og slutningen af ​​koden
+    
+    // HEJ DIN LILLE ABE, DU ER SMART :)
+    // HEJ DIN LILLE ABE, DU ER SMART :)
+    // HEJ DIN LILLE ABE, DU ER SMART :)
+    // HEJ DIN LILLE ABE, DU ER SMART :)
+            if (password === 'hej') { // Tjekker om adgangskoden er korrekt
+    // HEJ DIN LILLE ABE, DU ER SMART :)
+    // HEJ DIN LILLE ABE, DU ER SMART :)
+    // HEJ DIN LILLE ABE, DU ER SMART :)
+    // HEJ DIN LILLE ABE, DU ER SMART :)
+                window.location.href = 'admin_panel_access.html'; // Omdirigerer til admin_panel_access.html
+            } else {
+                loginMessage.textContent = 'Forkert kode. Prøv igen.'; // Viser fejlbesked
+            }
+        });
+    });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin_styles.css">
+</head>
+<body>
+    <div class="trademark">© Trademark SKS Visuals 2024</div> <!-- Den nye tekst i venstre hjørne -->
+    <div class="login-container">
+        <h1>ADMIN PANEL</h1>
+        <form id="login-form">
+            <label for="password">Kode:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Log ind</button>
+        </form>
+        <div id="login-message"></div>
+        <!-- Tilbageknap -->
+        <button onclick="goBack()">Tilbage</button>
+    </div>
+
+    <script src="admin_script.js"></script>
+    <script>
+        // Funktion til at gå tilbage til forrige side
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

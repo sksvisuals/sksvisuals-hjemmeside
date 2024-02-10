@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222; /* Mørkegrå baggrund */
+    color: #fff; /* Hvid tekst */
+}
+
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    background-color: #333; /* Mørkere grå baggrund til login-container */
+    padding: 20px;
+    border-radius: 10px; /* Afrundede kanter på login-container */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Skyggeeffekt på login-container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrerer indhold vandret */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="password"],
+button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="password"] {
+    background-color: #444; /* Mørkegrå baggrundsfarve for kodefeltet */
+    color: #fff; /* Hvid tekstfarve for kodefeltet */
+}
+
+button {
+    background-color: #555; /* Mørkegrå baggrundsfarve for knappen */
+    color: #fff; /* Hvid tekstfarve for knappen */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #666; /* Mørkere grå baggrundsfarve for knappen ved hover */
+}
+
+#login-message {
+    text-align: center;
+    color: red; /* Rød farve for login-beskeden */
+}
+
+.trademark {
+    position: absolute;
+    bottom: 10px; /* Afstand fra bunden af .container */
+    left: 10px; /* Afstand fra venstre kant af .container */
+    font-size: 12px; /* Justerer størrelsen af teksten */
+    color: #ccc; /* Justerer farven på teksten */
+}
+
+
+.mscursor-cursor {
+    pointer-events: none;
+    position: fixed;
+    display: block;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    z-index: 9999999999999999;  
+  }
+  .mscursor-difference{
+    mix-blend-mode: difference;
+  }
+  .mscursor-circle {
+      transform-origin: center;
+      position: absolute;
+      display: block;
+      width: 26px;
+      height: 26px;
+      border-radius: 20px;
+  }
+  .mscursor-border-transform{
+    animation: border-transform 3s linear infinite;
+  }
+  @keyframes border-transform {
+    0%,
+    100% {
+      border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+    }
+    14% {
+      border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+    }
+    28% {
+      border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+    }
+    42% {
+      border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+    }
+    56% {
+      border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+    }
+    70% {
+      border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+    }
+    84% {
+      border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+    }
+  }
+  .mscursor-scale{
+    transition: .5s ease;
+    transform: scale(1.6);
+  }
+  .mscursor-scale-outline{
+    transform:scale(1.9);
+    background-color: transparent !important;
+  }
+  
+  .mscursor-nocursor{
+    cursor:none!important;
+  }

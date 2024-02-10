@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222; /* Mørkegrå baggrund */
+    color: #fff; /* Hvid tekst */
+}
+
+
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px); /* Trækker højden af knappen fra viewport-højden */
+}
+
+.box {
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #333; /* Mørkere grå baggrund til bokse */
+    border-radius: 10px;
+    text-align: center;
+    line-height: 100px;
+    text-decoration: none; /* Fjerner understregning fra links */
+    color: #fff; /* Hvid farve for tekst */
+    transition: background-color 0.3s ease; /* Glat farveovergang */
+}
+
+.box:hover {
+    background-color: #555; /* Mørkere grå baggrund ved hover */
+}
+
+.button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Afstand over knappen */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555; /* Mørkegrå baggrundsfarve for knappen */
+    color: #fff; /* Hvid tekstfarve for knappen */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #666; /* Mørkere grå baggrundsfarve for knappen ved hover */
+}
+
+
+.mscursor-cursor {
+    pointer-events: none;
+    position: fixed;
+    display: block;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    z-index: 9999999999999999;  
+  }
+  .mscursor-difference{
+    mix-blend-mode: difference;
+  }
+  .mscursor-circle {
+      transform-origin: center;
+      position: absolute;
+      display: block;
+      width: 26px;
+      height: 26px;
+      border-radius: 20px;
+  }
+  .mscursor-border-transform{
+    animation: border-transform 3s linear infinite;
+  }
+  @keyframes border-transform {
+    0%,
+    100% {
+      border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+    }
+    14% {
+      border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+    }
+    28% {
+      border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+    }
+    42% {
+      border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+    }
+    56% {
+      border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+    }
+    70% {
+      border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+    }
+    84% {
+      border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+    }
+  }
+  .mscursor-scale{
+    transition: .5s ease;
+    transform: scale(1.6);
+  }
+  .mscursor-scale-outline{
+    transform:scale(1.9);
+    background-color: transparent !important;
+  }
+  
+  .mscursor-nocursor{
+    cursor:none!important;
+  }

@@ -1,0 +1,225 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222; /* Ændrer baggrundsfarven til mørkegrå */
+    color: #fff; /* Ændrer tekstfarven til hvid */
+    font-size: 18px; /* Øger teksts størrelse til 18px */
+    font-weight: 400; /* Ændrer skriftvægten til normal */
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile {
+    text-align: center;
+    background-color: #333; /* Ændrer baggrundsfarven for profilkassen til en mørkere nuance */
+    padding: 20px;
+    border-radius: 30px; /* Øger border-radius-værdien for at gøre kanterne mere runde */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Tilføjer en skyggeeffekt til profilkassen */
+}
+
+
+.profile img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+
+}
+
+.profile h1 {
+    font-size: 28px; /* Øger overskriftens størrelse til 28px */
+    margin-bottom: 10px;
+    font-weight: 600; /* Gør overskriften lidt mere markeret */
+}
+
+.profile p {
+    font-size: 20px; /* Øger teksts størrelse til 20px */
+    margin-bottom: 20px;
+    overflow-y: auto; /* Tilføjer en scrollbar, når der er for meget tekst */
+    max-height: 200px; /* Tilføjer en maksimal højde for teksten */
+    font-weight: 300; /* Ændrer skriftvægten til lidt lettere */
+}
+
+.social-links {
+    display: flex; /* Bruger flexbox til at placere logoerne ved siden af hinanden */
+    justify-content: center; /* Centrerer logoerne vandret */
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-links img {
+    width: 50px; /* Justerer bredden på logoerne */
+    height: 50px; /* Justerer højden på logoerne */
+}
+
+
+.mscursor-cursor {
+    pointer-events: none;
+    position: fixed;
+    display: block;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    z-index: 9999999999999999;  
+  }
+  .mscursor-difference{
+    mix-blend-mode: difference;
+  }
+  .mscursor-circle {
+      transform-origin: center;
+      position: absolute;
+      display: block;
+      width: 26px;
+      height: 26px;
+      border-radius: 20px;
+  }
+  .mscursor-border-transform{
+    animation: border-transform 3s linear infinite;
+  }
+  @keyframes border-transform {
+    0%,
+    100% {
+      border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+    }
+    14% {
+      border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+    }
+    28% {
+      border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+    }
+    42% {
+      border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+    }
+    56% {
+      border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+    }
+    70% {
+      border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+    }
+    84% {
+      border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+    }
+  }
+  .mscursor-scale{
+    transition: .5s ease;
+    transform: scale(1.6);
+  }
+  .mscursor-scale-outline{
+    transform:scale(1.9);
+    background-color: transparent !important;
+  }
+  
+  .mscursor-nocursor{
+    cursor:none!important;
+  }
+
+
+  .video-container {
+    position: relative;
+}
+
+#background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Sæt videoen bag andet indhold */
+    filter: grayscale(30%); /* Gør videoen gråskala */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Mørkt overlay med 50% gennemsigtighed */
+    z-index: 0; /* Sæt overlayet bag videoen */
+    pointer-events: none; /* Tillad klik på elementer bag overlayet */
+}
+.content {
+    position: relative;
+    z-index: 1; /* Sæt indholdet foran videoen og overlayet */
+    /* Tilpas stylingen af dit indhold efter behov */
+}
+
+
+.trademark {
+    position: absolute;
+    bottom: 10px; /* Afstand fra bunden af .container */
+    left: 10px; /* Afstand fra venstre kant af .container */
+    font-size: 12px; /* Justerer størrelsen af teksten */
+    color: #ccc; /* Justerer farven på teksten */
+}
+
+.contact-button {
+    position: absolute;
+    bottom: 100px; /* Afstand fra bunden af .container */
+    left: 50%; /* Centrerer vandret knappen */
+    transform: translateX(-50%);
+    padding: 15px 30px; /* Øger padding for at gøre knappen større */
+    font-size: 18px; /* Øger fontstørrelsen for at gøre teksten større */
+    font-weight: bold; /* Gør teksten fed */
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.admin-link {
+    position: absolute;
+    top: 10px; /* Afstand fra top */
+    left: 10px; /* Afstand fra venstre */
+    font-size: 14px; /* Justering af skriftstørrelse */
+    color: #fff; /* Farven på teksten */
+    text-decoration: none; /* Fjern understregning */
+    font-weight: bold; /* Gør teksten fed */
+    z-index: 999; /* Sørg for, at linket er forrest */
+    cursor: pointer; /* Viser en pegefingermarkør, når linket er klikbart */
+}
+
+@media screen and (max-width: 768px) {
+  .profile {
+      padding: 10px; /* Juster padding for at reducere afstanden mellem elementerne */
+  }
+
+  .profile img {
+      width: 150px; /* Juster størrelsen af billedet for at passe bedre på mindre skærme */
+      margin-bottom: 10px; /* Reducer bundmargenen for at skabe en mere kompakt layout */
+  }
+
+  .profile h1 {
+      font-size: 22px; /* Juster størrelsen af overskriften for at forbedre læsbarheden */
+  }
+
+  .profile p {
+      font-size: 16px; /* Juster størrelsen af teksten for at forbedre læsbarheden */
+  }
+
+  .social-links img {
+      width: 40px; /* Juster størrelsen af sociale medie ikoner for at passe bedre på mindre skærme */
+      height: 40px;
+  }
+
+  .trademark {
+      font-size: 10px; /* Juster størrelsen af teksten i hjørnet for at undgå overløb på mindre skærme */
+  }
+
+  .contact-button {
+      font-size: 16px; /* Juster størrelsen af knappen for at gøre den mere synlig og klikbar på mindre skærme */
+      padding: 10px 20px; /* Juster paddingen for at forbedre layoutet på mindre skærme */
+  }
+}
