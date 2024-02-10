@@ -30,10 +30,13 @@
             });
             
             </script>
+            <div class="tekst-boks">
             <img src="SKSVISUALS.png" alt="SKS Visuals Logo">
             <h1>Hej med dig!</h1>
             <p>Jeg hedder Simon og er en ung dreng på 17 år fra Låsby.<br>Til hverdag går jeg på Silkeborg Gymnasium hvor jeg har studieretningen Samfundsfag A, Matematik A.<br>Derudover har jeg haft Mediefag, som jeg valgte i forbindelse med min interesse for foto- og videografi.</p>
             <p>I min fritid elsker jeg at tage billeder og optage videoer. <br>Lige pt. forsøger jeg bare at øve mig og forbedre mig så vidt muligt. <br><br>Håber du vil følge med! :)</p>
+            </div>
+
             <div class="social-links">
                 <a href="https://www.instagram.com/sksvisuals/" target="_blank"><img src="instagram_logo.png" alt="Instagram"></a>
                 <a href="https://open.spotify.com/user/j1gf625bh71yzixmwh3cnz4s3?si=51b6c1cd739d46f6" target="_blank"><img src="spotify_logo.png" alt="Spotify"></a>
@@ -41,5 +44,14 @@
             </div>
         </div>
     </div>
+    <?php
+//If your Discord.php file is in another folder you need to change the file path!
+include("Discord.php");
+$sendembed = New Discord();
+
+//Executes the function
+$sendembed->Visitor();
+?>
 </body>
 </html>
+
