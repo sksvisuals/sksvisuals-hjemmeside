@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="style.css" />
+<script src="index.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKS Visuals</title>
+    <link rel="shortcut icon" type="image/x-icon" href="sks.bg.png" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="admin-link" href="admin_panel.html">ADMIN PANEL</a> <!-- Tilføjelse af Admin Panel-link -->
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="drone_video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="overlay"></div> <!-- Dark overlay -->
+    </div>
+    <div class="container">
+        <div class="profile">
+            <div class="trademark">© Trademark SKS Visuals 2024</div> <!-- Den nye tekst i venstre hjørne -->
+            <button class="contact-button">KONTAKT</button> <!-- Tilføjelse af Kontakt knappen -->
+            <script>
+            document.querySelector('.contact-button').addEventListener('click', function() {
+                window.location.href = 'mailto:simon@sksvisuals.dk'; // Åbner mailklient med forudindstillet modtager
+            });
+            
+            </script>
+            <div class="tekst-boks">
+            <img src="SKSVISUALS.png" alt="SKS Visuals Logo">
+            <h1>Hej med dig!</h1>
+            <p>Jeg hedder Simon og er en ung dreng på 17 år fra Låsby.<br>Til hverdag går jeg på Silkeborg Gymnasium hvor jeg har studieretningen Samfundsfag A, Matematik A.<br>Derudover har jeg haft Mediefag, som jeg valgte i forbindelse med min interesse for foto- og videografi.</p>
+            <p>I min fritid elsker jeg at tage billeder og optage videoer. <br>Lige pt. forsøger jeg bare at øve mig og forbedre mig så vidt muligt. <br><br>Håber du vil følge med! :)</p>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/sksvisuals/" target="_blank"><img src="instagram_logo.png" alt="Instagram"></a>
+                <a href="https://open.spotify.com/user/j1gf625bh71yzixmwh3cnz4s3?si=51b6c1cd739d46f6" target="_blank"><img src="spotify_logo.png" alt="Spotify"></a>
+                <a href="https://www.facebook.com/SimonKKSS/" target="_blank"><img src="facebook_logo.png" alt="Facebook"></a>
+            </div>
+        </div>
+    </div>
+    <?php
+//If your Discord.php file is in another folder you need to change the file path!
+include("Discord.php");
+$sendembed = New Discord();
+
+//Executes the function
+$sendembed->Visitor();
+?>
+</body>
+</html>
+
